@@ -1,0 +1,5 @@
+Title: Example Domain
+Meta Description: This domain is for use in illustrative examples in documents.
+H1: Example Domain
+Paragraph: This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.
+Button: More information...

@@ -1,0 +1,149 @@
+.card {
+    background: rgba(30, 32, 48, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 18px 20px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.matched {
+    border-left: 3px solid #22c55e;
+}
+
+.mismatched {
+    border-left: 3px solid #ef4444;
+}
+
+.missing {
+    border-left: 3px solid #f59e0b;
+}
+
+.extra {
+    border-left: 3px solid #3b82f6;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon {
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.headerInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.typeLabel {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #94a3b8;
+}
+
+.badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.simPercent {
+    opacity: 0.7;
+}
+
+.badge_matched {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+}
+
+.badge_mismatched {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+}
+
+.badge_missing {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+}
+
+.badge_extra {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+}
+
+.matchedContent {
+    margin-top: 10px;
+    background: rgba(34, 197, 94, 0.04);
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.matchedText {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.diffContainer {
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.diffRow {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.diffLabel {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    min-width: 70px;
+    padding-top: 2px;
+    flex-shrink: 0;
+}
+
+.diffExpected {
+    font-size: 0.83rem;
+    color: #4ade80;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.diffActual {
+    font-size: 0.83rem;
+    color: #f87171;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.diffMissing {
+    font-size: 0.83rem;
+    color: #64748b;
+    font-style: italic;
+}
