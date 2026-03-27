@@ -374,8 +374,9 @@
 .detailsHeader {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  margin-bottom: 24px;
+  gap: 12px;
+  margin-top: 16px;
+  margin-bottom: 32px;
 }
 
 .detailsTitle {

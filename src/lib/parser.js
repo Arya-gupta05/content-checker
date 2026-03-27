@@ -107,6 +107,12 @@ function parseTextContent(text) {
       } else if (lowerLine.startsWith("button:")) {
         line = line.substring(7).trim();
         lowerLine = line.toLowerCase();
+      } else if (lowerLine.startsWith("text:")) {
+        line = line.substring(5).trim();
+        lowerLine = line.toLowerCase();
+      } else if (lowerLine.startsWith("tittle:")) {
+        line = line.substring(7).trim();
+        lowerLine = line.toLowerCase();
       }
 
       // 2. Clean up button/link formatting (e.g., "[Enquire Now] > Button" -> "Enquire Now")
@@ -122,7 +128,8 @@ function parseTextContent(text) {
       // 3. Ignore specific label lines & developer notes
       if (
         ignoredLines.includes(lowerLine) ||
-        lowerLine.startsWith("note for the designer:")
+        lowerLine.startsWith("note for the designer:") ||
+        lowerLine.includes("(folder page)")
       ) {
         continue;
       }

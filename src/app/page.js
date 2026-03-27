@@ -13,7 +13,7 @@ export default function Home() {
   const [pageReports, setPageReports] = useState(null);
   const [activePageIdx, setActivePageIdx] = useState(null);
   const [error, setError] = useState("");
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [activeFilter, setActiveFilter] = useState("matched");
   const [showScraped, setShowScraped] = useState(false);
   const [showExpected, setShowExpected] = useState(false);
   const resultsRef = useRef(null);
@@ -118,7 +118,7 @@ export default function Home() {
 
       setPageReports(reports);
       setStatus("");
-      setActiveFilter("all");
+      setActiveFilter("matched");
       setShowScraped(false);
       setShowExpected(false);
 
@@ -176,7 +176,7 @@ export default function Home() {
 
   const viewPageDetails = (idx) => {
     setActivePageIdx(idx);
-    setActiveFilter("all");
+    setActiveFilter("matched");
     setShowScraped(false);
     setShowExpected(false);
     setTimeout(() => {
@@ -419,7 +419,6 @@ export default function Home() {
                 {/* Filter Tabs */}
                 <div className={styles.filterTabs}>
                   {[
-                    { key: "all", label: "All", count: activePage.report.summary.total },
                     { key: "matched", label: "Matched", count: activePage.report.summary.matched, color: "#22c55e" },
                     { key: "mismatched", label: "Mismatched", count: activePage.report.summary.mismatched, color: "#ef4444" },
                     { key: "missing_from_website", label: "Missing", count: activePage.report.summary.missingFromWebsite, color: "#f59e0b" },
