@@ -190,16 +190,9 @@ export default function Home() {
       <header className={styles.hero}>
         <div className={styles.heroGlow}></div>
         <div className={styles.heroContent}>
-          <div className={styles.badge}>
-            <span className={styles.badgeDot}></span>
-            Multi-Page Content Checker
-          </div>
           <h1 className={styles.heading}>
             Content <span className={styles.gradientText}>Checker</span>
           </h1>
-          <p className={styles.subtitle}>
-            Check multiple pages at once by providing a single document! Validate titles, meta descriptions, headings, paragraphs, and buttons across your site in page order.
-          </p>
         </div>
       </header>
 
@@ -241,27 +234,6 @@ export default function Home() {
                 Content Document
               </label>
               <FileUpload onFileSelect={setFile} disabled={loading} />
-            </div>
-
-            {/* Document Format Guide */}
-            <div className={styles.formatGuide}>
-              <p className={styles.formatTitle}>📋 Multi-Page Format Guide</p>
-              <p className={styles.formatHint}>
-                Start each page with its name on a new line (e.g. <code>Home</code> or <code>Tree Surgery (Page 2)</code>), followed by its raw content.
-              </p>
-              <div className={styles.formatContent}>
-                <code className={styles.formatCode}>
-                  Home{"\n"}
-                  My Page Title{"\n"}
-                  Meta description here{"\n"}
-                  Main Heading{"\n"}
-                  First paragraph text goes here{"\n"}
-                  {"\n"}
-                  Tree Surgery (Page 2){"\n"}
-                  Tree Surgery Services{"\n"}
-                  Expert surgeons ready to help
-                </code>
-              </div>
             </div>
 
             {error && (
@@ -485,10 +457,6 @@ export default function Home() {
         )}
       </main>
 
-      {/* Footer */}
-      <footer className={styles.footer}>
-        <p>Content Checker — Built for content verification workflows</p>
-      </footer>
     </div>
   );
 }
